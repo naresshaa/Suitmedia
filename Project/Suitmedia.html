@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideas - Suitmedia</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="header">
+  <div>
+    <img src="img/logo.png" alt="logo">
+  </div>
+  <nav>
+    <a href="#">Work</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Ideas</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<div class="banner">
+  <img src="img/banner2.jpg" alt="Banner">
+  <div class="text">Ideas<br><small>Where all our great things begin</small></div>
+</div>
+
+<main>
+  <div class="controls">
+    <div>
+      Showing <span id="showing">1-10</span> of <span id="total">0</span>
+    </div>
+    <div>
+      Show per page:
+      <select id="perPage">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+      Sort by:
+      <select id="sort">
+        <option value="-published_at">Newest</option>
+        <option value="published_at">Oldest</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="loading-indicator" class="loading-indicator">Loading ideas...</div>
+  <div id="error-message" class="error-message" style="display:none;"></div>
+
+  <div class="grid" id="posts">
+  </div>
+  
+  <div class="pagination" id="pagination"></div>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
